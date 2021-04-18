@@ -32,7 +32,7 @@
 
 @media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 
@@ -201,7 +201,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 5px;
+  padding: 7px;
   border-radius: 4px;
 }
 
@@ -255,8 +255,10 @@ li {
 .feedback .feedback-form #submitbutton {
   padding: 10px 30px;
   border: unset;
-  background: lightgreen;
   border-radius: 5px;
+  background: transparent;
+  border: 1px solid #2989cf;
+  color: #2989cf;
   font-size: 1.2em;
   width: 200px;
   font-weight: bold;
@@ -271,6 +273,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .feedback .feedback-form #submitbutton span {
@@ -296,17 +299,26 @@ li {
   background: #f4f4f4;
 }
 
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 0 10px;
+}
+
 @media only screen and (max-width: 1200px) {
   .feedback .feedback-form .checkboxes-group {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .feedback .feedback-form .grid {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
   }
   .feedback .feedback-form .ratings-group {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-  }
-  .feedback .feedback-form .ratings-group .input-group label {
-    font-size: 1em;
   }
 }
 
@@ -319,6 +331,10 @@ li {
     padding: 130px 0 50px;
   }
   .feedback .feedback-form .checkboxes-group {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .feedback .feedback-form .grid {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
@@ -362,6 +378,10 @@ li {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  .feedback .feedback-form .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
   .feedback .feedback-form .ratings-group {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -382,6 +402,9 @@ li {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
+}
+
+@media only screen and (max-width: 490px) {
   .feedback .feedback-form .ratings-group {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);

@@ -35,7 +35,7 @@ $eigth-color: #337bff;
 }
 @media only screen and(min-width:1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 body {
@@ -166,7 +166,7 @@ li {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 5px;
+        padding: 7px;
         border-radius: 4px;
         input {
           width: 50px;
@@ -210,8 +210,12 @@ li {
     #submitbutton {
       padding: 10px 30px;
       border: unset;
-      background: lightgreen;
+      // background: lightgreen;
+      // color: black;
       border-radius: 5px;
+      background: transparent;
+      border: 1px solid #2989cf;
+      color: #2989cf;
       font-size: 1.2em;
       width: 200px;
       font-weight: bold;
@@ -220,6 +224,7 @@ li {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
       span {
         transform: translateX(10px);
         transition: 0.3s;
@@ -239,6 +244,11 @@ li {
     background: #f4f4f4;
   }
 }
+.grid{
+  display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 0 10px;
+}
 
 @media only screen and(max-width:1200px) {
   .feedback {
@@ -246,12 +256,12 @@ li {
       .checkboxes-group {
         grid-template-columns: repeat(4, 1fr);
       }
+      .grid{
+        grid-template-columns: repeat(4, 1fr);
+      }
       .ratings-group {
         grid-template-columns: repeat(4, 1fr);
         .input-group{
-          label{
-            font-size: 1em;
-          }
         }
       }
     }
@@ -271,6 +281,9 @@ li {
     }
     .feedback-form {
       .checkboxes-group {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .grid{
         grid-template-columns: repeat(3, 1fr);
       }
       .ratings-group {
@@ -316,6 +329,9 @@ li {
       .checkboxes-group {
         grid-template-columns: repeat(2, 1fr);
       }
+      .grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
       .ratings-group {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -342,6 +358,13 @@ li {
       .checkboxes-group {
         grid-template-columns: repeat(1, 1fr);
       }
+      
+    }
+  }
+}
+@media only screen and(max-width:490px){
+  .feedback{
+    .feedback-form{
       .ratings-group {
         grid-template-columns: repeat(1, 1fr);
       }

@@ -38,8 +38,8 @@ $eigth-color: #337bff;
     max-width: 1140px;
   }
 }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -159,7 +159,7 @@ li {
     .ratings-group {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0 20px;
+      gap: 0 10px;
       .input-group {
         width: 100%;
         margin-bottom: 20px;
@@ -179,6 +179,7 @@ li {
         }
         label {
           color: white;
+          font-size: 1.1em;
         }
         &:nth-child(1) {
           background-color: $first-color;
@@ -205,7 +206,6 @@ li {
           background-color: $eigth-color;
         }
       }
-     
     }
     #submitbutton {
       padding: 10px 30px;
@@ -220,13 +220,13 @@ li {
       display: flex;
       align-items: center;
       justify-content: center;
-      span{
+      span {
         transform: translateX(10px);
-        transition: .3s;
+        transition: 0.3s;
       }
-      &:hover{
-        opacity: 0.9;
-        span{
+      &:hover {
+        opacity: 0.95;
+        span {
           transform: translateX(15px);
         }
       }
@@ -240,16 +240,22 @@ li {
   }
 }
 
-@media only screen and(max-width:1200px){
+@media only screen and(max-width:1200px) {
   .feedback {
     .feedback-form {
-      .checkboxes-group{
+      .checkboxes-group {
         grid-template-columns: repeat(4, 1fr);
       }
-      .ratings-group{
+      .ratings-group {
         grid-template-columns: repeat(4, 1fr);
+        .input-group{
+          label{
+            font-size: 1em;
+          }
+        }
       }
     }
+
   }
 }
 @media only screen and(max-width:991px) {
@@ -264,14 +270,14 @@ li {
       padding: 130px 0 50px;
     }
     .feedback-form {
-      .checkboxes-group{
+      .checkboxes-group {
         grid-template-columns: repeat(3, 1fr);
       }
-      .ratings-group{
+      .ratings-group {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    .feedback-footer{
+    .feedback-footer {
       max-height: 70px;
       min-height: 70px;
     }
@@ -280,7 +286,6 @@ li {
   li {
     font-size: 1.5em;
   }
-  
 }
 
 @media only screen and(max-width:767px) {
@@ -308,10 +313,10 @@ li {
       }
     }
     .feedback-form {
-      .checkboxes-group{
+      .checkboxes-group {
         grid-template-columns: repeat(2, 1fr);
       }
-      .ratings-group{
+      .ratings-group {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -333,11 +338,11 @@ li {
         margin-bottom: 60px;
       }
     }
-    .feedback-form{
-      .checkboxes-group{
+    .feedback-form {
+      .checkboxes-group {
         grid-template-columns: repeat(1, 1fr);
       }
-      .ratings-group{
+      .ratings-group {
         grid-template-columns: repeat(1, 1fr);
       }
     }

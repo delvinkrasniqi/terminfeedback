@@ -92,6 +92,7 @@ h2 {
       grid-template-columns: 1fr 1fr;
       box-shadow: $box-shadow;
       border-radius: 10px;
+      margin-bottom: 30px;
       h2.termin-details {
         grid-column-start: 1;
         grid-column-end: 3;
@@ -117,15 +118,28 @@ h2 {
         margin-right: 15px;
       }
     }
+  } 
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
+
   .termindate {
     background: $orange-color;
     padding: 40px;
     display: flex;
     padding: 22px 30px 15px;
-    margin: 30px 0;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: $box-shadow;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
     .input-group {
       position: relative;
       label {
@@ -146,6 +160,7 @@ h2 {
         border-radius: 5px;
         outline: none;
         -webkit-appearance: none;
+        color: $gray-color;
       }
       &:nth-child(1) {
         margin-right: 40px;
@@ -155,7 +170,55 @@ h2 {
       }
     }
   }
+  .termindate.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    animation: fade 1s;
+  }
+ 
+  .mjv-box {
+    background: $sixth-color;
+    padding: 40px;
+    display: flex;
+    padding: 22px 30px 15px;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    .input-group {
+      position: relative;
+      label {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%) translateX(30px);
+        background: white;
+        border-radius: 5px;
+        color: $light-gray;
+        font-weight: lighter;
+        font-size: 0.8em;
+        padding: 3px 5px;
+      }
+      input {
+        padding: 15px 15px 10px 30px;
+        width: 150px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        -webkit-appearance: none;
+        color: $gray-color;
+      }
+    }
+  }
+  .mjv-box.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: fade 1s;
+  }
   .feedback-form {
+    margin-top: 30px;
     h2 {
       margin-bottom: 40px;
     }
@@ -169,9 +232,9 @@ h2 {
     .ratings-group {
       box-shadow: $box-shadow;
       border-radius: 10px;
-      padding: 30px 0;
+      padding: 25px 0;
       h2 {
-        padding: 0 30px 15px 30px;
+        padding: 0 30px 10px 30px;
         border-bottom: 1px solid $blue-color;
       }
     }
@@ -182,7 +245,7 @@ h2 {
         label {
           font-size: 1.1em;
           color: $gray-color;
-          padding-left: 20px;
+          padding-left: 25px;
           cursor: pointer;
           font-weight: bold;
           color: $gray-color;

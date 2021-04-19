@@ -51,7 +51,12 @@
                     <input type="time" name="termin-time" id="termin-time" value="00:00">
                    </div>
                 </div>
-
+                <div class="mjv-box">
+                    <div class="input-group">
+                        <label>MJV</label> <input type="number" name="kkabschluss" min="0"
+                        max="10" step="1" inputmode="numeric" pattern="[0-9]*" value="1">
+                    </div>
+                </div>
                 <div class="feedback-form">
                     <form action="" method="post">
 
@@ -99,40 +104,40 @@
                         <div class="ratings-group">
                             <h2>Abaschlusse</h2>
                             <div class="input-group">
-                                <label>KK - Abschlusse</label> <input type="number" name="kkabschlusse" min="0"
-                                max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                                <label for="kkabschluss">KK - Abschluss</label> <input type="number" name="kkabschluss" min="0"
+                                max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="kkabschluss">
                             </div>
                             <div class="input-group">
-                                <label>Lebensversicherung</label> <input type="number" name="lebensversicherung" min="0"
-                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                                <label for="lebensversicherung">Lebensversicherung</label> <input type="number" name="lebensversicherung" min="0"
+                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="lebensversicherung">
                             </div>
                             <div class="input-group">
-                                <label>Autoversicherung</label> <input type="number" name="autoversicherung" min="0"
-                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                                <label for="autoversicherung">Autoversicherung</label> <input type="number" name="autoversicherung" min="0"
+                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="autoversicherung">
                             </div>
                             <div class="input-group">
-                                <label>Hausrat</label> <input type="number" name="hausrat" min="0" max="10" step="1"
-                                    inputmode="numeric" pattern="[0-9]*">
+                                <label for="hausrat">Hausrat</label> <input type="number" name="hausrat" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*" id="hausrat">
                             </div>
                             <div class="input-group">
-                                <label>Haftpflicht</label> <input type="number" name="haftpflicht" min="0" max="10"
-                                    step="1" inputmode="numeric" pattern="[0-9]*">
+                                <label for="haftpflicht">Haftpflicht</label> <input type="number" name="haftpflicht" min="0" max="10"
+                                    step="1" inputmode="numeric" pattern="[0-9]*" id="haftpflicht">
                             </div>
                             <div class="input-group">
-                                <label>Rechtsschutz</label> <input type="number" name="rechtsschutz" min="0" max="10"
-                                    step="1" inputmode="numeric" pattern="[0-9]*">
+                                <label for="rechtsschutz">Rechtsschutz</label> <input type="number" name="rechtsschutz" min="0" max="10"
+                                    step="1" inputmode="numeric" pattern="[0-9]*" id="rechtsschutz">
                             </div>
                             <div class="input-group">
-                                <label>Mandate</label> <input type="number" name="mandate" min="0" max="10" step="1"
-                                    inputmode="numeric" pattern="[0-9]*">
+                                <label for="mandate">Mandate</label> <input type="number" name="mandate" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*" id="mandate">
                             </div>
                             <div class="input-group">
-                                <label>KMU</label> <input type="number" name="kmu" min="0" max="10" step="1"
-                                    inputmode="numeric" pattern="[0-9]*">
+                                <label for="kmu">KMU</label> <input type="number" name="kmu" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*" id="kmu">
                             </div>
                             <div class="input-group">
-                                <label>Steuererklärung</label> <input type="number" name="steuererklärung" min="0"
-                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                                <label for="steuererklärung">Steuererklärung</label> <input type="number" name="steuererklärung" min="0"
+                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="steuererklärung">
                             </div>
                         </div>
                         <!-- Gray sec with button -->
@@ -146,6 +151,18 @@
     </div>
     <script>
         document.getElementById('termin-datum').valueAsDate = new Date();
+
+        let offenCheckBox = document.querySelector("#offen");
+        let offenBox = document.querySelector(".termindate");
+        let mjvCheckBox = document.querySelector("#mjv");
+        let mjvBox = document.querySelector(".mjv-box");
+
+        offenCheckBox.addEventListener("click",()=>{
+           offenBox.classList.toggle("active");
+        })
+        mjvCheckBox.addEventListener("click",()=>{
+            mjvBox.classList.toggle("active");
+        })
     </script>
 </body>
 

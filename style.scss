@@ -1,4 +1,3 @@
-
 $first-color: #1bb38e;
 $second-color: #a6b548;
 $third-color: #223d49;
@@ -13,7 +12,7 @@ $light-gray: #707070;
 $blue-color: #2989cf;
 $orange-color: #f3ce7d;
 $checkbox-bg: #c4c4c4;
-$submit-btn : #194667;
+$submit-btn: #194667;
 $box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
 
 * {
@@ -117,7 +116,6 @@ h2 {
         margin-right: 15px;
       }
     }
-    
   }
   .termindate {
     background: $orange-color;
@@ -146,6 +144,8 @@ h2 {
         border: none;
         border-radius: 5px;
         outline: none;
+        -webkit-appearance: none;
+        border-radius: 0;
       }
       &:nth-child(1) {
         margin-right: 40px;
@@ -373,7 +373,6 @@ h2 {
   }
 }
 
-
 @media only screen and(max-width:500px) {
   .feedback {
     .termindate {
@@ -399,8 +398,8 @@ h2 {
       }
     }
     .feedback-form {
-      .checkboxes-group{
-        .input-group{
+      .checkboxes-group {
+        .input-group {
           padding: 0 20px;
         }
       }

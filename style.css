@@ -163,7 +163,6 @@ h2 {
   border-radius: 5px;
   outline: none;
   -webkit-appearance: none;
-  border-radius: 0;
 }
 
 .feedback .termindate .input-group:nth-child(1) {
@@ -403,7 +402,23 @@ h2 {
     padding: 15px;
   }
   .feedback .termindate .input-group:nth-child(1) input {
-    width: 50%;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .feedback .feedback-form .ratings-group {
+    margin-bottom: 50px;
+  }
+  .feedback .feedback-form #submitbutton {
+    position: fixed;
+    margin-bottom: 20px;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 10px;
   }
 }
 
@@ -418,6 +433,9 @@ h2 {
   .feedback .termindate .input-group:nth-child(1) {
     margin-right: 0;
     margin-bottom: 30px;
+  }
+  .feedback .termindate .input-group:nth-child(1) input {
+    width: 100%;
   }
 }
 

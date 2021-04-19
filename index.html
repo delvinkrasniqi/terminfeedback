@@ -152,6 +152,8 @@
     <script>
         document.getElementById('termin-datum').valueAsDate = new Date();
 
+        const ratingsGroup = document.querySelectorAll(".ratings-group .input-group");
+       
         let offenCheckBox = document.querySelector("#offen");
         let offenBox = document.querySelector(".termindate");
         let mjvCheckBox = document.querySelector("#mjv");
@@ -162,6 +164,12 @@
         })
         mjvCheckBox.addEventListener("click",()=>{
             mjvBox.classList.toggle("active");
+        })
+
+        ratingsGroup.forEach((rating)=>{
+            rating.addEventListener("click",()=>{
+                rating.children[1].focus();
+            })
         })
     </script>
 </body>

@@ -403,7 +403,7 @@ h2 {
     padding: 15px;
   }
   .feedback .termindate .input-group:nth-child(1) input {
-    min-width: 150px;
+    width: 150px;
   }
 }
 

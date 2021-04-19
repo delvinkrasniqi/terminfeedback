@@ -5,117 +5,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Termin Feedback</title>
 </head>
 
 <body>
     <div class="container">
-    <div class="feedback">
-        <div class="feedback-header">
-            <h2 class="feedback-header__title">
-                Termin Feedback
-            </h2>
-            <p class="feedback-header__id">
-                #264545
-            </p>
-            <img src="./assets/logo.png" alt="" id="logo">
-        </div>
-        <div class="feedback-main">
-            <!-- Feedback Information -->
-            <div class="feedback-information">
-                <div class="feedbacker">
-                   <img src="./assets/face-mask.png" alt="">
-                   <div>
-                    <h2 class="feedbacker_name">Herr Stauber</h2>
-                    <p><span class="street">Street</span>, <span class="plz">PLZ</span>, <span class="city">City</span></p>
+        <div class="feedback">
+            <div class="feedback-header">
+                <h2 class="feedback-header__title">
+                    Termin Feedback
+                </h2>
+                <p class="feedback-header__id">
+                    #264545
+                </p>
+                <img src="./assets/logo.png" alt="" id="logo">
+            </div>
+            <div class="feedback-main">
+
+
+                <!-- Feedback Information -->
+                <div class="feedback-information">
+                    <h2 class="termin-details">Termin Details</h2>
+                    <div class="feedbacker">
+                        <h2 class="feedbacker_name">Herr Stauber</h2>
+                        <p><span class="street">Lysstrasse 3</span>, <span class="plz">2560</span>, <span
+                                class="city">Nidau</span></p>
+                    </div>
+                    <div class="feedback-date">
+                        <h2><span class="date">15.04.2021</span> um <span class="time">17:00</span></h2>
+                        <p>Alban Gerguri</p>
+                    </div>
+                </div>
+
+                <div class="termindate">
+                    <div class="input-group">
+                        <label for="termin-datum">Termin Datum</label>
+                    <input type="date" name="termin-datum" id="termin-datum">
+                    </div>
+                   <div class="input-group">
+                    <label for="termin-time">UHR</label>
+                    <input type="time" name="termin-time" id="termin-time">
                    </div>
-                  
                 </div>
-                <div class="feedback-date">
-                    <img src="./assets/calendar.png" alt="">
-                    <div>
-                        <h2><span class="date">15.04.2021</span> - <span class="time">00:00:00</span></h2>
-                    <p>Fabio Colucci</p>
-                    </div>
+
+                <div class="feedback-form">
+                    <form action="" method="post">
+
+                        <div class="checkboxes-group">
+                            <h2>Status</h2>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Nicht besucht" class="checkboxInput"
+                                    id="nichtbesucht"><label for="nichtbesucht">Nicht besucht</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Nicht zu Hause" class="checkboxInput"
+                                    id="nichtzuhause"><label for="nichtzuhause">Nicht zu Hause</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Stattgefunden" class="checkboxInput"
+                                    id="stattgefunden"><label for="stattgefunden">Stattgefunden</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Offen" class="checkboxInput"
+                                    id="offen"><label for="offen">Offen</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Positiv" class="checkboxInput"
+                                    id="positiv"><label for="positiv">Positiv</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Wollte kein Termin"
+                                    class="checkboxInput" id="wolltekeintermin"><label for="wolltekeintermin">Wollte
+                                    kein Termin</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Behandlung" class="checkboxInput"
+                                    id="behandlung"><label for="behandlung">Behandlung</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="MJV" class="checkboxInput"
+                                    id="mjv"><label for="mjv">MJV</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="checkbox" name="checkboxes" value="Negativ" class="checkboxInput"
+                                    id="negativ"><label for="negativ">Negativ</label>
+                            </div>
+                        </div>
+
+                        <div class="ratings-group">
+                            <h2>Abaschlusse</h2>
+                            <div class="input-group">
+                                <label>KK - Abschlusse</label> <input type="number" name="kkabschlusse" min="0"
+                                max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Lebensversicherung</label> <input type="number" name="lebensversicherung" min="0"
+                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Autoversicherung</label> <input type="number" name="autoversicherung" min="0"
+                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Hausrat</label> <input type="number" name="hausrat" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Haftpflicht</label> <input type="number" name="haftpflicht" min="0" max="10"
+                                    step="1" inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Rechtsschutz</label> <input type="number" name="rechtsschutz" min="0" max="10"
+                                    step="1" inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Mandate</label> <input type="number" name="mandate" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>KMU</label> <input type="number" name="kmu" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                            <div class="input-group">
+                                <label>Steuererklärung</label> <input type="number" name="steuererklärung" min="0"
+                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*">
+                            </div>
+                        </div>
+                        <!-- Gray sec with button -->
+
+                        <button id="submitbutton">Save</button>
+                    </form>
                 </div>
+
             </div>
-
-            <div class="feedback-form">
-                <form action="" method="post">
-                    <h2>Andere Abschlusse</h2>
-                    <div class="checkboxes-group">
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Nicht besucht" class="checkboxInput" id="nichtbesucht"><label for="nichtbesucht">Nicht besucht</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Nicht zu Hause" class="checkboxInput" id="nichtzuhause"><label for="nichtzuhause">Nicht zu Hause</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Stattgefunden" class="checkboxInput" id="stattgefunden"><label for="stattgefunden">Stattgefunden</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Offen" class="checkboxInput" id="offen"><label for="offen">Offen</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Positiv" class="checkboxInput" id="positiv"><label for="positiv">Positiv</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Wollte kein Termin" class="checkboxInput" id="wolltekeintermin"><label for="wolltekeintermin">Wollte kein Termin</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Behandlung" class="checkboxInput" id="behandlung"><label for="behandlung">Behandlung</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="MJV" class="checkboxInput" id="mjv"><label for="mjv">MJV</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="checkbox" name="checkboxes" value="Negativ" class="checkboxInput" id="negativ"><label for="negativ">Negativ</label>
-                        </div>
-                    </div>
-                    <h2>Andere Abschlusse</h2>
-                    <div class="ratings-group">
-                        
-                        <div class="input-group">
-                            <label>Lebensversicherung</label> <input type="number" name="lebensversicherung" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>Autoversicherung</label> <input type="number" name="autoversicherung" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>Hausrat</label> <input type="number" name="hausrat" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>Haftpflicht</label> <input type="number" name="haftpflicht" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>Rechtsschutz</label> <input type="number" name="rechtsschutz" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>Mandate</label> <input type="number" name="mandate" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>KMU</label> <input type="number" name="kmu" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                        <div class="input-group">
-                            <label>Steuererklärung</label> <input type="number" name="steuererklärung" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*">
-                        </div>
-                    </div>
-                    <!-- Gray sec with button -->
-                    
-                   <div class="grid"> <button id="submitbutton">Submit <span class="material-icons">send</span></button></div>
-                </form>
-            </div>
-
-        </div>
-        <div class="feedback-footer">
-
         </div>
     </div>
-</div>
 </body>
 
 </html>

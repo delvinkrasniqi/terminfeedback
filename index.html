@@ -44,6 +44,7 @@
                     <div class="input-group">
                         <label for="termin-datum">Termin Datum</label>
                     <input type="date" name="termin-datum" id="termin-datum">
+                 
                     </div>
                    <div class="input-group">
                     <label for="termin-time">UHR</label>
@@ -143,6 +144,9 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('termin-datum').valueAsDate = new Date();
+    </script>
 </body>
 
 </html>

@@ -183,6 +183,7 @@ h2 {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 0 30px;
+  font-family: "Poppins", sans-serif;
 }
 
 .feedback .feedback-form .checkboxes-group,
@@ -257,7 +258,6 @@ h2 {
   margin: 0 30px 10px 30px;
   border-radius: 4px;
   background: #1bb38e;
-  font-family: "Poppins", sans-serif;
 }
 
 .feedback .feedback-form .ratings-group .input-group input {

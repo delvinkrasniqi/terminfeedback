@@ -223,7 +223,6 @@ h2 {
         margin: 0 30px 10px 30px;
         border-radius: 4px;
         background: $first-color;
-        
 
         input {
           width: 130px;
@@ -364,23 +363,21 @@ h2 {
     .termindate {
       .input-group {
         &:nth-child(1) {
-          input{
+          input {
             width: 200px;
           }
         }
-        
       }
     }
-    
   }
 }
-@media only screen and(max-width:576px){
-  .feedback{
-    .feedback-form{
-      .ratings-group{
+@media only screen and(max-width:576px) {
+  .feedback {
+    .feedback-form {
+      .ratings-group {
         margin-bottom: 50px;
       }
-      #submitbutton{
+      #submitbutton {
         position: fixed;
         margin-bottom: 20px;
         bottom: 0;
@@ -402,16 +399,14 @@ h2 {
         &:nth-child(1) {
           margin-right: 0;
           margin-bottom: 30px;
-          input{
+          input {
             width: 100%;
           }
         }
-        
       }
     }
   }
 }
-
 
 @media only screen and(max-width:400px) {
   .feedback {
@@ -431,7 +426,7 @@ h2 {
       .ratings-group {
         .input-group {
           padding: 5px 5px 5px 15px;
-          margin: 0 25px 10px 25px;
+          margin: 0 15px 10px 15px;
           input {
             width: 60px;
           }

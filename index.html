@@ -137,6 +137,12 @@
                                     pattern="[0-9]*" id="steuererklärung">
                             </div>
                         </div>
+                        <div class="comment-group">
+                            <div class="input-group">
+                                <label for="comment">Comment</label>
+                                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
                         <button id="submitbutton">Save</button>
                     </form>
                 </div>
@@ -150,6 +156,7 @@
         let offenBox = document.querySelector(".termindate");
         let mjvCheckBox = document.querySelector("#mjv");
         let mjvBox = document.querySelector(".mjv-box");
+
         const ratingsGroup = document.querySelectorAll(".ratings-group .input-group");
 
         offenCheckBox.addEventListener("click", () => {

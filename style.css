@@ -186,6 +186,7 @@ h2 {
   outline: none;
   -webkit-appearance: none;
   color: #4e4e4e;
+  cursor: pointer;
 }
 
 .feedback .termindate .input-group:nth-child(1) {
@@ -397,8 +398,47 @@ h2 {
   background-color: #337bff;
 }
 
+.feedback .feedback-form .comment-group {
+  background: #ececec;
+  padding: 30px 20px 20px 20px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 10px;
+  margin-top: 30px;
+  -webkit-box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
+          box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
+}
+
+.feedback .feedback-form .comment-group .input-group {
+  position: relative;
+}
+
+.feedback .feedback-form .comment-group .input-group label {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%) translateX(30px);
+          transform: translateY(-50%) translateX(30px);
+  background: white;
+  border-radius: 5px;
+  color: #707070;
+  font-weight: lighter;
+  font-size: 0.8em;
+  padding: 3px 5px;
+}
+
+.feedback .feedback-form .comment-group .input-group textarea {
+  width: 100%;
+  border: 1px solid #CFCFCF;
+  border-radius: 10px;
+  resize: none;
+  padding: 20px;
+  outline: none;
+  font-size: 1.2em;
+}
+
 .feedback .feedback-form #submitbutton {
-  padding: 20px 30px;
+  padding: 15px 30px;
   border: unset;
   border-radius: 14px;
   background: #194667;
@@ -495,8 +535,8 @@ h2 {
 }
 
 @media only screen and (max-width: 576px) {
-  .feedback .feedback-form .ratings-group {
-    margin-bottom: 50px;
+  .feedback .feedback-form .comment-group {
+    margin-bottom: 100px;
   }
   .feedback .feedback-form #submitbutton {
     position: fixed;

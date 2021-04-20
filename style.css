@@ -189,6 +189,7 @@ h2 {
   -webkit-appearance: none;
   color: #4e4e4e;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .feedback .termindate .input-group:nth-child(1) {

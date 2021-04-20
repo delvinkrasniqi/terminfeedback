@@ -530,6 +530,9 @@ h2 {
   .feedback .feedback-form form #submitbutton {
     padding: 15px;
   }
+  .feedback .feedback-form .comment-group {
+    font-size: 1em;
+  }
   .feedback .termindate .input-group:nth-child(1) input {
     width: 200px;
   }

@@ -295,7 +295,6 @@ h2 {
 
 .feedback .feedback-form .checkboxes-group .input-group label {
   font-size: 1.1em;
-  color: #4e4e4e;
   padding-left: 25px;
   padding-right: 25px;
   cursor: pointer;
@@ -436,6 +435,7 @@ h2 {
   outline: none;
   font-size: 1.2em;
   -webkit-appearance: none;
+  color: #4e4e4e;
 }
 
 .feedback .feedback-form #submitbutton {

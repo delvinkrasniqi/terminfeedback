@@ -245,7 +245,6 @@ h2 {
         padding: 0 30px;
         label {
           font-size: 1.1em;
-          color: $gray-color;
           padding-left: 25px;
           padding-right: 25px;
           cursor: pointer;
@@ -361,6 +360,7 @@ h2 {
           outline: none;
           font-size: 1.2em;
           -webkit-appearance: none;
+          color: $gray-color;
         }
       }
     }

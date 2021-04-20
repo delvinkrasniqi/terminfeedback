@@ -140,6 +140,8 @@ h2 {
     display: none;
     opacity: 0;
     visibility: hidden;
+    position: relative;
+    z-index: 2;
     .input-group {
       position: relative;
       label {
@@ -403,6 +405,38 @@ h2 {
       }
     }
   }
+}
+@keyframes overlay{
+  0%{
+    opacity: 0;
+    visibility: hidden;
+  }
+  20%{
+    opacity: 1;
+    visibility: visible;
+  }
+  80%{
+    opacity: 1;
+    visibility: visible;
+  }
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+    visibility: hidden;
+  
+}
+.overlay.active{
+  animation: overlay 5s;
 }
 
 @media only screen and(max-width:991px) {

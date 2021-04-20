@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/timepicker/mtr-datepicker.clutterboard-theme.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Termin Feedback</title>
 </head>
@@ -43,7 +44,8 @@
                     </div>
                     <div class="input-group">
                         <label for="termin-time">UHR</label>
-                        <input type="time" name="termin-time" id="termin-time" value="00:00">
+                        <input type="time" name="termin-time" id="termin-time" min="08:00" max="21:00" step="1800">
+                    
                     </div>
                 </div>
                 <div class="mjv-box">
@@ -154,8 +156,11 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
     <script>
         document.getElementById('termin-datum').valueAsDate = new Date();
+        let overlay = document.querySelector(".overlay");
+
         //Boxes
         let offenBox = document.querySelector(".termindate");
         let mjvBox = document.querySelector(".mjv-box");
@@ -177,6 +182,7 @@
 
         offenCheckBox.addEventListener("click", () => {
             offenBox.classList.toggle("active");
+            overlay.classList.add("active");
         })
         mjvCheckBox.addEventListener("click", () => {
             mjvBox.classList.toggle("active");
@@ -209,46 +215,46 @@
             })
         }
 
-        function checkDuo(mainCheckbox, targetedCheckbox){
+        function checkDuo(mainCheckbox, targetedCheckbox) {
             let checkboxesState = false;
-            mainCheckbox.addEventListener("change",()=>{
-                if(!checkboxesState){
-                    checkboxesGroup.forEach(checkbox=>{
+            mainCheckbox.addEventListener("change", () => {
+                if (!checkboxesState) {
+                    checkboxesGroup.forEach(checkbox => {
                         if (checkbox.children[0] !== mainCheckbox) {
                             checkbox.classList.add("checkbox--disabled");
                             checkbox.children[0].disabled = true;
-                            targetedCheckbox.checked=true;
+                            targetedCheckbox.checked = true;
                         }
                     })
-                    checkboxesState=true;
+                    checkboxesState = true;
                 }
-                else{
-                    checkboxesGroup.forEach(checkbox=>{
+                else {
+                    checkboxesGroup.forEach(checkbox => {
                         checkbox.classList.remove("checkbox--disabled");
                         checkbox.children[0].disabled = false;
-                       
+
                     })
-                    targetedCheckbox.checked=false;
-                    checkboxesState=false;
+                    targetedCheckbox.checked = false;
+                    checkboxesState = false;
                 }
             })
         }
 
-    
-     disableCheckbox(nichtzuhauseCheckBox);
-     disableCheckbox(positivCheckBox);
-     disableCheckbox(abgesagt);
-     disableCheckbox(wolltekeinterminCheckBox);
-     disableCheckbox(behandlung);
-     disableCheckbox(mjvCheckBox);
-     disableCheckbox(negativCheckBox);
+
+        disableCheckbox(nichtzuhauseCheckBox);
+        disableCheckbox(positivCheckBox);
+        disableCheckbox(abgesagt);
+        disableCheckbox(wolltekeinterminCheckBox);
+        disableCheckbox(behandlung);
+        disableCheckbox(mjvCheckBox);
+        disableCheckbox(negativCheckBox);
 
 
-     checkDuo(offenCheckBox,stattgefundenCheckBox);
-     checkDuo(positivCheckBox,stattgefundenCheckBox);
-     checkDuo(behandlungCheckBox,stattgefundenCheckBox);
-     checkDuo(mjvCheckBox,stattgefundenCheckBox);
-     checkDuo(negativCheckBox,stattgefundenCheckBox);
+        checkDuo(offenCheckBox, stattgefundenCheckBox);
+        checkDuo(positivCheckBox, stattgefundenCheckBox);
+        checkDuo(behandlungCheckBox, stattgefundenCheckBox);
+        checkDuo(mjvCheckBox, stattgefundenCheckBox);
+        checkDuo(negativCheckBox, stattgefundenCheckBox);
     </script>
 </body>
 

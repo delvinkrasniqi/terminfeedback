@@ -44,7 +44,7 @@
                     <div class="input-group">
                         <label for="termin-datum">Termin Datum</label>
                         <!-- <input type="date" name="termin-datum" id="termin-datum"> -->
-                        <input type="date" id="termin-datum" name="termin-datum">
+                        <input type="date" id="termin-datum" name="termin-datum" data-value="">
                     </div>
                     <div class="input-group">
                         <label for="termin-time">UHR</label>
@@ -160,22 +160,15 @@
             </div>
         </div>
     </div>
-    <div class="overlay"></div>
+
+
     <script src="./assets/picker/picker.js"></script>
+    <script src="./assets/picker/legacy.js"></script>
     <script src="./assets/picker/picker.time.js"></script>
     <script src="./assets/picker/picker.date.js"></script>
+    <script src="./assets/main.js"></script>
     <script>
-        $('#termin-time').pickatime({
-            format: 'H:i',
-            interval: 30,
-            min: [8,0],
-            max: [21,0],
-        });
-
-        $('#termin-datum').pickadate()
-    </script>
-    <script>
-        // document.getElementById('termin-datum').valueAsDate = new Date();
+      
         let overlay = document.querySelector(".overlay");
 
         //Boxes
@@ -199,7 +192,7 @@
 
         offenCheckBox.addEventListener("click", () => {
             offenBox.classList.toggle("active");
-            overlay.classList.add("active");
+
         })
         mjvCheckBox.addEventListener("click", () => {
             mjvBox.classList.toggle("active");

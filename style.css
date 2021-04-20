@@ -435,6 +435,7 @@ h2 {
   padding: 20px;
   outline: none;
   font-size: 1.2em;
+  -webkit-appearance: none;
 }
 
 .feedback .feedback-form #submitbutton {

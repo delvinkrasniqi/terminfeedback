@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/timepicker/mtr-datepicker.clutterboard-theme.min.css">
+    <script src="./assets/jquery.js"></script>
+    <link rel="stylesheet" href="./assets/default.css">
+    <link rel="stylesheet" href="./assets/default.time.css">
+    <link rel="stylesheet" href="./assets/default.date.css">
     <link rel="stylesheet" href="./style.css">
     <title>Termin Feedback</title>
 </head>
@@ -40,12 +43,13 @@
                 <div class="termindate">
                     <div class="input-group">
                         <label for="termin-datum">Termin Datum</label>
-                        <input type="date" name="termin-datum" id="termin-datum">
+                        <!-- <input type="date" name="termin-datum" id="termin-datum"> -->
+                        <input type="date" id="termin-datum" name="termin-datum">
                     </div>
                     <div class="input-group">
                         <label for="termin-time">UHR</label>
-                        <input type="time" name="termin-time" id="termin-time" min="08:00" max="21:00" step="1800">
-                    
+                        <!-- <input type="time" name="termin-time" id="termin-time" min="08:00" max="21:00" step="1800"> -->
+                        <input type="text" id="termin-time" name="termin-time">
                     </div>
                 </div>
                 <div class="mjv-box">
@@ -157,8 +161,21 @@
         </div>
     </div>
     <div class="overlay"></div>
+    <script src="./assets/picker/picker.js"></script>
+    <script src="./assets/picker/picker.time.js"></script>
+    <script src="./assets/picker/picker.date.js"></script>
     <script>
-        document.getElementById('termin-datum').valueAsDate = new Date();
+        $('#termin-time').pickatime({
+            format: 'H:i',
+            interval: 30,
+            min: [8,0],
+            max: [21,0],
+        });
+
+        $('#termin-datum').pickadate()
+    </script>
+    <script>
+        // document.getElementById('termin-datum').valueAsDate = new Date();
         let overlay = document.querySelector(".overlay");
 
         //Boxes

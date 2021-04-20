@@ -250,6 +250,7 @@ h2 {
           cursor: pointer;
           font-weight: bold;
           color: $gray-color;
+          transition: 0.2s ease;
         }
         .checkboxInput {
           -webkit-appearance: none;
@@ -261,6 +262,7 @@ h2 {
           cursor: pointer;
           transform: translateY(2px);
           background: $checkbox-bg;
+          transition: 0.2s ease;
         }
         .checkboxInput:checked {
           color: black;
@@ -276,6 +278,14 @@ h2 {
           transform: translate(-50%, -50%);
           line-height: 1;
           font-weight: bold;
+        }
+      }
+      .checkbox--disabled{
+        input,
+        label{
+          opacity: 0.5;
+          transition: 0.2s ease;
+          pointer-events: none;
         }
       }
     }

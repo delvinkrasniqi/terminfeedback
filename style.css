@@ -300,6 +300,8 @@ h2 {
   cursor: pointer;
   font-weight: bold;
   color: #4e4e4e;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .feedback .feedback-form .checkboxes-group .input-group .checkboxInput {
@@ -313,6 +315,8 @@ h2 {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
   background: #c4c4c4;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .feedback .feedback-form .checkboxes-group .input-group .checkboxInput:checked {
@@ -330,6 +334,14 @@ h2 {
   transform: translate(-50%, -50%);
   line-height: 1;
   font-weight: bold;
+}
+
+.feedback .feedback-form .checkboxes-group .checkbox--disabled input,
+.feedback .feedback-form .checkboxes-group .checkbox--disabled label {
+  opacity: 0.5;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  pointer-events: none;
 }
 
 .feedback .feedback-form .ratings-group .input-group {

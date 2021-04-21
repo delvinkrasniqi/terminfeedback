@@ -1,5 +1,11 @@
-let userLocale = navigator.languages[0];
-let lang = '';
+// let userLocale = navigator.languages[0];
+// let lang = '';
+const queryString = window.location.search;
+const userLocale = new URLSearchParams(queryString).get("lang");
+
+
+
+
 
 let pageUrl = `?lang=${userLocale}`;
 window.history.pushState('', '', pageUrl);

@@ -160,7 +160,6 @@ h2 {
   opacity: 0;
   visibility: hidden;
   position: relative;
-  z-index: 2;
 }
 
 .feedback .termindate .input-group {
@@ -182,7 +181,7 @@ h2 {
 
 .feedback .termindate .input-group input {
   padding: 15px 15px 10px 30px;
-  width: 150px;
+  width: 200px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -445,7 +444,7 @@ h2 {
 
 .feedback .feedback-form .comment-group .input-group textarea {
   width: 100%;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #c7c7c7;
   border-radius: 10px;
   resize: none;
   padding: 20px;

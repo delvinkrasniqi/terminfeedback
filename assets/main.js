@@ -1,20 +1,41 @@
-// let userLocale = navigator.languages[0];
-// let lang = '';
-
+// let lang = navigator.languages[0];
 
 
 const queryString = window.location.search;
-const userLocale = new URLSearchParams(queryString).get("lang");
-
-if(userLocale!==null){
-    var pageUrl = `?lang=${userLocale}`;
+const urlParam = new URLSearchParams(queryString).get("lang");
+console.log(urlParam);
+if(urlParam!==null){
+    var pageUrl = `?lang=${urlParam}`;
 }
 else{
     var pageUrl = `?lang=de`;
 }
+
 window.history.pushState('', '', pageUrl);
+let userLocale = urlParam;
 
 
+if (userLocale == "de") {
+    // German
+    jQuery.extend(jQuery.fn.pickadate.defaults, {
+        monthsFull: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+        monthsShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+        weekdaysFull: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+        weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+        today: 'Heute',
+        clear: 'Löschen',
+        close: 'Schließen',
+        firstDay: 1,
+        format: 'dd.mm.yyyy',
+        formatSubmit: 'dd/mm/YYYY'
+    });
+
+    jQuery.extend(jQuery.fn.pickatime.defaults, {
+        clear: 'Löschen',
+        format: 'H:i'
+    });
+
+}
 
 if (userLocale == "fr") {
     // French
@@ -67,28 +88,7 @@ if (userLocale == "it") {
     });
 
 }
-if (userLocale == "de") {
-    // German
 
-    jQuery.extend(jQuery.fn.pickadate.defaults, {
-        monthsFull: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-        monthsShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
-        weekdaysFull: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-        weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
-        today: 'Heute',
-        clear: 'Löschen',
-        close: 'Schließen',
-        firstDay: 1,
-        format: 'dd.mm.yyyy',
-        formatSubmit: 'dd/mm/YYYY'
-    });
-
-    jQuery.extend(jQuery.fn.pickatime.defaults, {
-        clear: 'Löschen',
-        format: 'H:i'
-    });
-
-}
 
 $('#termin-time').pickatime({
     format: 'H:i',
@@ -99,7 +99,8 @@ $('#termin-time').pickatime({
 
 $('#termin-datum').pickadate({
     format: 'd.mm.yyyy',
-    formatSubmit: 'dd/mm/YYYY'
+    formatSubmit: 'dd/mm/YYYY',
+    
 })
 
 //Boxes

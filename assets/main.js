@@ -98,6 +98,7 @@ $('#termin-time').pickatime({
 });
 
 $('#termin-datum').pickadate({
+    format: 'd.mm.yyyy',
     formatSubmit: 'dd/mm/YYYY'
 })
 

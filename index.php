@@ -22,7 +22,7 @@
           function translate($keyWord) {
 
             //no url param at start so it will use the DE json
-           if((!isset($_GET["lang"]))){
+           if((!isset($_GET["lang"])) || ($_GET["lang"] !== "de"  && $_GET["lang"] !== "it"  && $_GET["lang"] !== "fr")){
             $words = json_decode(file_get_contents("resource-de.json"), true);
             echo $words[$keyWord];
            }

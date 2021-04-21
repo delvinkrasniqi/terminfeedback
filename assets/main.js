@@ -1,6 +1,9 @@
 let userLocale = navigator.languages[0];
 let lang = '';
 
+var pageUrl = `?lang=${userLocale}`;
+window.history.pushState('', '', pageUrl);
+
 if (userLocale == "fr") {
     // French
     jQuery.extend(jQuery.fn.pickadate.defaults, {
@@ -85,3 +88,98 @@ $('#termin-time').pickatime({
 $('#termin-datum').pickadate({
     formatSubmit: 'yyyy/mm/dd'
 })
+
+//Boxes
+let offenBox = document.querySelector(".termindate");
+let mjvBox = document.querySelector(".mjv-box");
+
+//checkboxes
+let nichtzuhauseCheckBox = document.querySelector("#nichtzuhause");
+let stattgefundenCheckBox = document.querySelector("#stattgefunden");
+let positivCheckBox = document.querySelector("#positiv");
+let abgesagtCheckBox = document.querySelector("#abgesagt");
+let wolltekeinterminCheckBox = document.querySelector("#wolltekeintermin");
+let behandlungCheckBox = document.querySelector("#behandlung");
+let mjvCheckBox = document.querySelector("#mjv");
+let offenCheckBox = document.querySelector("#offen");
+let negativCheckBox = document.querySelector("#negativ");
+
+//checkboxes groups
+const checkboxesGroup = document.querySelectorAll(".checkboxes-group .input-group");
+const ratingsGroup = document.querySelectorAll(".ratings-group .input-group");
+
+offenCheckBox.addEventListener("click", () => {
+    offenBox.classList.toggle("active");
+
+})
+mjvCheckBox.addEventListener("click", () => {
+    mjvBox.classList.toggle("active");
+})
+
+ratingsGroup.forEach((rating) => {
+    rating.addEventListener("click", () => {
+        rating.children[1].focus();
+    })
+})
+function disableCheckbox(targetCheckbox) {
+    let checkboxesState = false;
+    targetCheckbox.addEventListener("change", () => {
+        if (!checkboxesState) {
+            checkboxesGroup.forEach(checkbox => {
+                if (checkbox.children[0] !== targetCheckbox) {
+                    checkbox.classList.add("checkbox--disabled");
+                    checkbox.children[0].disabled = true;
+                }
+            })
+            checkboxesState = true;
+        }
+        else {
+            checkboxesGroup.forEach(checkbox => {
+                checkbox.classList.remove("checkbox--disabled");
+                checkbox.children[0].disabled = false;
+            })
+            checkboxesState = false;
+        }
+    })
+}
+
+function checkDuo(mainCheckbox, targetedCheckbox) {
+    let checkboxesState = false;
+    mainCheckbox.addEventListener("change", () => {
+        if (!checkboxesState) {
+            checkboxesGroup.forEach(checkbox => {
+                if (checkbox.children[0] !== mainCheckbox) {
+                    checkbox.classList.add("checkbox--disabled");
+                    checkbox.children[0].disabled = true;
+                    targetedCheckbox.checked = true;
+                }
+            })
+            checkboxesState = true;
+        }
+        else {
+            checkboxesGroup.forEach(checkbox => {
+                checkbox.classList.remove("checkbox--disabled");
+                checkbox.children[0].disabled = false;
+
+            })
+            targetedCheckbox.checked = false;
+            checkboxesState = false;
+        }
+    })
+}
+
+
+disableCheckbox(nichtzuhauseCheckBox);
+disableCheckbox(positivCheckBox);
+disableCheckbox(abgesagt);
+disableCheckbox(wolltekeinterminCheckBox);
+disableCheckbox(behandlung);
+disableCheckbox(mjvCheckBox);
+disableCheckbox(negativCheckBox);
+
+
+checkDuo(offenCheckBox, stattgefundenCheckBox);
+checkDuo(positivCheckBox, stattgefundenCheckBox);
+checkDuo(behandlungCheckBox, stattgefundenCheckBox);
+checkDuo(mjvCheckBox, stattgefundenCheckBox);
+checkDuo(negativCheckBox, stattgefundenCheckBox);

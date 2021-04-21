@@ -1,9 +1,10 @@
 // let lang = navigator.languages[0];
-
+var pageUrl = `?lang=de`;
 
 const queryString = window.location.search;
 const urlParam = new URLSearchParams(queryString).get("lang");
 console.log(urlParam);
+
 if(urlParam!==null){
     var pageUrl = `?lang=${urlParam}`;
 }

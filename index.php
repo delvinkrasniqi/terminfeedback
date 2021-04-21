@@ -18,9 +18,15 @@
 <body>
 
     <?php
-        // PHP code goes here
+       
           function translate($keyWord) {
 
+            //no url param at start so it will use the DE json
+           if((!isset($_GET["lang"]))){
+            $words = json_decode(file_get_contents("resource-de.json"), true);
+            echo $words[$keyWord];
+           }
+           else{
             if( htmlspecialchars($_GET["lang"]) == "de"){
                 $words = json_decode(file_get_contents("resource-de.json"), true);
                 echo $words[$keyWord];
@@ -33,6 +39,8 @@
                 $words = json_decode(file_get_contents("resource-fr.json"), true);
                 echo $words[$keyWord];
             }
+           }
+           
 
           }
     
@@ -59,7 +67,8 @@
                                 class="city">Nidau</span></p>
                     </div>
                     <div class="feedback-date">
-                        <h2><span class="date">15.04.2021</span> <?php translate("at") ?> <span class="time">17:00</span></h2>
+                        <h2><span class="date">15.04.2021</span> <?php translate("at") ?> <span
+                                class="time">17:00</span></h2>
                         <p>Alban Gerguri</p>
                     </div>
                 </div>
@@ -87,7 +96,8 @@
                             <h2><?php  translate("status-title");?></h2>
                             <div class="input-group">
                                 <input type="checkbox" name="checkboxes" value="Nicht besucht" class="checkboxInput"
-                                    id="nichtbesucht"><label for="nichtbesucht"><?php translate("not-visited") ?></label>
+                                    id="nichtbesucht"><label
+                                    for="nichtbesucht"><?php translate("not-visited") ?></label>
                             </div>
                             <div class="input-group">
                                 <input type="checkbox" name="checkboxes" value="Nicht zu Hause" class="checkboxInput"
@@ -111,7 +121,8 @@
                             </div>
                             <div class="input-group">
                                 <input type="checkbox" name="checkboxes" value="Wollte kein Termin"
-                                    class="checkboxInput" id="wolltekeintermin"><label for="wolltekeintermin"><?php translate('not-wanted');?></label>
+                                    class="checkboxInput" id="wolltekeintermin"><label
+                                    for="wolltekeintermin"><?php translate('not-wanted');?></label>
                             </div>
                             <div class="input-group">
                                 <input type="checkbox" name="checkboxes" value="Behandlung" class="checkboxInput"
@@ -130,42 +141,47 @@
                         <div class="ratings-group">
                             <h2>Abaschlusse</h2>
                             <div class="input-group">
-                                <label for="kkabschluss"><?php translate("kk-degree") ?></label> <input type="number" name="kkabschluss"
-                                    min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="kkabschluss">
+                                <label for="kkabschluss"><?php translate("kk-degree") ?></label> <input type="number"
+                                    name="kkabschluss" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*"
+                                    id="kkabschluss">
                             </div>
                             <div class="input-group">
-                                <label for="lebensversicherung"><?php translate("life-insurance") ?></label> <input type="number"
-                                    name="lebensversicherung" min="0" max="10" step="1" inputmode="numeric"
-                                    pattern="[0-9]*" id="lebensversicherung">
+                                <label for="lebensversicherung"><?php translate("life-insurance") ?></label> <input
+                                    type="number" name="lebensversicherung" min="0" max="10" step="1"
+                                    inputmode="numeric" pattern="[0-9]*" id="lebensversicherung">
                             </div>
                             <div class="input-group">
-                                <label for="autoversicherung"><?php translate("car-insurance") ?></label> <input type="number"
-                                    name="autoversicherung" min="0" max="10" step="1" inputmode="numeric"
+                                <label for="autoversicherung"><?php translate("car-insurance") ?></label> <input
+                                    type="number" name="autoversicherung" min="0" max="10" step="1" inputmode="numeric"
                                     pattern="[0-9]*" id="autoversicherung">
                             </div>
                             <div class="input-group">
-                                <label for="hausrat"><?php translate("household-items") ?></label> <input type="number" name="hausrat" min="0"
-                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="hausrat">
+                                <label for="hausrat"><?php translate("household-items") ?></label> <input type="number"
+                                    name="hausrat" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*"
+                                    id="hausrat">
                             </div>
                             <div class="input-group">
-                                <label for="haftpflicht"><?php translate("liability") ?></label> <input type="number" name="haftpflicht"
-                                    min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="haftpflicht">
+                                <label for="haftpflicht"><?php translate("liability") ?></label> <input type="number"
+                                    name="haftpflicht" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*"
+                                    id="haftpflicht">
                             </div>
                             <div class="input-group">
-                                <label for="rechtsschutz"><?php translate("legal-protection") ?></label> <input type="number" name="rechtsschutz"
-                                    min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="rechtsschutz">
+                                <label for="rechtsschutz"><?php translate("legal-protection") ?></label> <input
+                                    type="number" name="rechtsschutz" min="0" max="10" step="1" inputmode="numeric"
+                                    pattern="[0-9]*" id="rechtsschutz">
                             </div>
                             <div class="input-group">
-                                <label for="mandate"><?php translate("mandates") ?></label> <input type="number" name="mandate" min="0"
-                                    max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="mandate">
+                                <label for="mandate"><?php translate("mandates") ?></label> <input type="number"
+                                    name="mandate" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*"
+                                    id="mandate">
                             </div>
                             <div class="input-group">
-                                <label for="kmu"><?php translate("kmu") ?></label> <input type="number" name="kmu" min="0" max="10" step="1"
-                                    inputmode="numeric" pattern="[0-9]*" id="kmu">
+                                <label for="kmu"><?php translate("kmu") ?></label> <input type="number" name="kmu"
+                                    min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*" id="kmu">
                             </div>
                             <div class="input-group">
-                                <label for="steuererklärung"><?php translate("tax-declaration") ?></label> <input type="number"
-                                    name="steuererklärung" min="0" max="10" step="1" inputmode="numeric"
+                                <label for="steuererklärung"><?php translate("tax-declaration") ?></label> <input
+                                    type="number" name="steuererklärung" min="0" max="10" step="1" inputmode="numeric"
                                     pattern="[0-9]*" id="steuererklärung">
                             </div>
                         </div>

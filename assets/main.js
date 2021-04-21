@@ -1,7 +1,7 @@
 let userLocale = navigator.languages[0];
 let lang = '';
 
-var pageUrl = `?lang=${userLocale}`;
+let pageUrl = `?lang=${userLocale}`;
 window.history.pushState('', '', pageUrl);
 
 if (userLocale == "fr") {
@@ -15,8 +15,8 @@ if (userLocale == "fr") {
         clear: 'Effacer',
         close: 'Fermer',
         firstDay: 1,
-        format: 'dd mmmm yyyy',
-        formatSubmit: 'yyyy/mm/dd',
+        format: 'dd.mm.yyyy',
+        formatSubmit: 'dd/mm/YYYY',
         labelMonthNext: "Mois suivant",
         labelMonthPrev: "Mois précédent",
         labelMonthSelect: "Sélectionner un mois",
@@ -40,8 +40,8 @@ if (userLocale == "it") {
         clear: 'Cancella',
         close: 'Chiudi',
         firstDay: 1,
-        format: 'dddd d mmmm yyyy',
-        formatSubmit: 'yyyy/mm/dd',
+        format: 'dd.mm.yyyy',
+        formatSubmit: 'dd/mm/YYYY',
         labelMonthNext: 'Mese successivo',
         labelMonthPrev: 'Mese precedente',
         labelMonthSelect: 'Seleziona un mese',
@@ -67,8 +67,8 @@ if (userLocale == "de") {
         clear: 'Löschen',
         close: 'Schließen',
         firstDay: 1,
-        format: 'dddd, dd. mmmm yyyy',
-        formatSubmit: 'yyyy/mm/dd'
+        format: 'dd.mm.yyyy',
+        formatSubmit: 'dd/mm/YYYY'
     });
 
     jQuery.extend(jQuery.fn.pickatime.defaults, {
@@ -86,7 +86,7 @@ $('#termin-time').pickatime({
 });
 
 $('#termin-datum').pickadate({
-    formatSubmit: 'yyyy/mm/dd'
+    formatSubmit: 'dd/mm/YYYY'
 })
 
 //Boxes

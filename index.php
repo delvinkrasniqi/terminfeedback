@@ -36,15 +36,15 @@
            }
            else{
             if( htmlspecialchars($_GET["lang"]) == "de"){
-                $words = json_decode(file_get_contents("resource-de.json"), true);
+                $words = json_decode(file_get_contents("translations/resource-de.json"), true);
                 echo $words[$keyWord];
             }
             if(htmlspecialchars($_GET["lang"]) == "it"){
-                $words = json_decode(file_get_contents("resource-it.json"), true);
+                $words = json_decode(file_get_contents("translations/resource-it.json"), true);
                 echo $words[$keyWord];
             }
             if(htmlspecialchars($_GET["lang"])=="fr"){
-                $words = json_decode(file_get_contents("resource-fr.json"), true);
+                $words = json_decode(file_get_contents("translations/resource-fr.json"), true);
                 echo $words[$keyWord];
             }
            }

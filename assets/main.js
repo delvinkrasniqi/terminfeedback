@@ -1,5 +1,4 @@
 // let lang = navigator.languages[0];
-var pageUrl = `?lang=de`;
 
 const queryString = window.location.search;
 const urlParam = new URLSearchParams(queryString).get("lang");
@@ -10,13 +9,16 @@ if(urlParam!==null){
 }
 else{
     var pageUrl = `?lang=de`;
+   
+  
 }
-
-window.history.pushState('', '', pageUrl);
 let userLocale = urlParam;
+console.log(userLocale);
+window.history.pushState('', '', pageUrl);
 
 
-if (userLocale == "de") {
+
+if (userLocale == "de" || (userLocale !=="de" && userLocale !=="fr" && userLocale !=="it")) {
     // German
     jQuery.extend(jQuery.fn.pickadate.defaults, {
         monthsFull: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
@@ -98,11 +100,26 @@ $('#termin-time').pickatime({
     max: [21, 0],
 });
 
-$('#termin-datum').pickadate({
-    format: 'd.mm.yyyy',
-    formatSubmit: 'dd/mm/YYYY',
-    
-})
+if(urlParam === null && urlParam !=="de" && urlParam !=="fr" && urlParam !=="it"){
+    $('#termin-datum').pickadate({
+        monthsFull: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+        monthsShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+        weekdaysFull: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+        weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+        today: 'Heute',
+        clear: 'Löschen',
+        close: 'Schließen',
+        firstDay: 1,
+        format: 'dd.mm.yyyy',
+        formatSubmit: 'dd/mm/YYYY'
+    })
+}
+else{
+    $('#termin-datum').pickadate({
+        format: 'd.mm.yyyy',
+        formatSubmit: 'dd/mm/YYYY',
+    })
+}
 
 //Boxes
 let offenBox = document.querySelector(".termindate");

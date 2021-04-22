@@ -593,6 +593,10 @@ h2 {
     top: 50%;
     right: 20px;
   }
+  .feedback .feedback-header .feedback-header__title {
+    font-size: 1.2em;
+    max-width: 80%;
+  }
   .feedback .feedback-form .checkboxes-group .input-group {
     padding: 0 20px;
   }

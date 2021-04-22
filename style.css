@@ -63,6 +63,8 @@ h2 {
   border-radius: 0 0 28px 28px;
   padding: 20px 30px;
   position: relative;
+  -webkit-box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
+          box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
 }
 
 .feedback .feedback-header .feedback-header__title,

@@ -2,7 +2,7 @@
 
 const queryString = window.location.search;
 const urlParam = new URLSearchParams(queryString).get("lang");
-console.log(urlParam);
+
 
 if(urlParam!==null){
     var pageUrl = `?lang=${urlParam}`;
@@ -13,7 +13,6 @@ else{
   
 }
 let userLocale = urlParam;
-console.log(userLocale);
 window.history.pushState('', '', pageUrl);
 
 

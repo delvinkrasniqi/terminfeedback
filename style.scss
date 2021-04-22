@@ -71,6 +71,7 @@ h2 {
     border-radius: 0 0 28px 28px;
     padding: 20px 30px;
     position: relative;
+    box-shadow: $box-shadow;
     .feedback-header__title,
     .feedback-header__id {
       color: white;

@@ -9,8 +9,6 @@ if(urlParam!==null){
 }
 else{
     var pageUrl = `?lang=de`;
-   
-  
 }
 let userLocale = urlParam;
 window.history.pushState('', '', pageUrl);

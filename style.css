@@ -300,7 +300,7 @@ h2 {
 }
 
 .feedback .feedback-form .checkboxes-group .alert {
-  background: #E0A800;
+  background: #fcc623;
   padding: 15px;
   border-radius: 10px 10px 10px 10px;
   position: absolute;
@@ -322,6 +322,7 @@ h2 {
   visibility: hidden;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  z-index: 10;
 }
 
 .feedback .feedback-form .checkboxes-group .alert::before {
@@ -335,7 +336,7 @@ h2 {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #E0A800;
+  border-top: 10px solid #fcc623;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }

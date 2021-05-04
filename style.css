@@ -184,6 +184,7 @@ h2 {
 .feedback .termindate .input-group input {
   padding: 15px 15px 10px 30px;
   width: 200px;
+  min-width: 200px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -295,8 +296,14 @@ h2 {
 }
 
 .feedback .feedback-form .checkboxes-group .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .feedback .feedback-form .checkboxes-group .input-group label {
@@ -308,6 +315,7 @@ h2 {
   color: #4e4e4e;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  line-height: 1;
 }
 
 .feedback .feedback-form .checkboxes-group .input-group .checkboxInput {
@@ -368,6 +376,7 @@ h2 {
 
 .feedback .feedback-form .ratings-group .input-group input {
   width: 130px;
+  min-width: 130px;
   color: black;
   font-weight: bold;
   border: none;
@@ -381,6 +390,7 @@ h2 {
 .feedback .feedback-form .ratings-group .input-group label {
   color: white;
   font-size: 1.1em;
+  padding-right: 10px;
 }
 
 .feedback .feedback-form .ratings-group .input-group:nth-child(3) {
@@ -417,7 +427,7 @@ h2 {
 
 .feedback .feedback-form .comment-group {
   background: #ececec;
-  padding: 30px 20px 20px 20px;
+  padding: 30px 30px 20px 30px;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -509,6 +519,7 @@ h2 {
   }
   .feedback .feedback-form .ratings-group .input-group input {
     width: 90px;
+    min-width: 90px;
   }
 }
 
@@ -553,6 +564,7 @@ h2 {
   }
   .feedback .termindate .input-group:nth-child(1) input {
     width: 200px;
+    min-width: 200px;
   }
 }
 
@@ -608,9 +620,13 @@ h2 {
   }
   .feedback .feedback-form .ratings-group .input-group input {
     width: 60px;
+    min-width: 60px;
   }
   .feedback .feedback-form .ratings-group .input-group label {
     font-size: 1em;
+  }
+  .feedback .feedback-form .comment-group {
+    padding: 30px 15px 20px 15px;
   }
   .feedback .feedback-main {
     padding: 40px 0 0 0;

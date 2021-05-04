@@ -160,6 +160,7 @@ h2 {
       input {
         padding: 15px 15px 10px 30px;
         width: 200px;
+        min-width: 200px;
         border: none;
         border-radius: 5px;
         outline: none;
@@ -248,8 +249,10 @@ h2 {
     }
     .checkboxes-group {
       .input-group {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding: 0 30px;
+        display: flex;
+        align-items: center;
         label {
           font-size: 1.1em;
           padding-left: 25px;
@@ -258,6 +261,7 @@ h2 {
           font-weight: bold;
           color: $gray-color;
           transition: 0.2s ease;
+          line-height: 1;
         }
         .checkboxInput {
           -webkit-appearance: none;
@@ -308,6 +312,7 @@ h2 {
 
         input {
           width: 130px;
+          min-width: 130px;
           color: black;
           font-weight: bold;
           border: none;
@@ -320,6 +325,7 @@ h2 {
         label {
           color: white;
           font-size: 1.1em;
+          padding-right: 10px;
         }
         &:nth-child(3) {
           background-color: $second-color;
@@ -349,7 +355,7 @@ h2 {
     }
     .comment-group{
       background: $lighter-white;
-      padding: 30px 20px 20px 20px;
+      padding: 30px 30px 20px 30px;
       grid-column-start: 1;
       grid-column-end: 3;
       border-radius: 10px;
@@ -430,6 +436,7 @@ h2 {
         .input-group {
           input {
             width: 90px;
+            min-width: 90px;
           }
         }
       }
@@ -486,6 +493,7 @@ h2 {
         &:nth-child(1) {
           input {
             width: 200px;
+            min-width: 200px;
           }
         }
       }
@@ -554,11 +562,15 @@ h2 {
           margin: 0 15px 10px 15px;
           input {
             width: 60px;
+            min-width: 60px;
           }
           label {
             font-size: 1em;
           }
         }
+      }
+      .comment-group{
+        padding: 30px 15px 20px 15px;
       }
     }
     .feedback-main {

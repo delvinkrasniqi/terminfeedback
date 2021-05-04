@@ -25,6 +25,7 @@
 
 <body>
 
+
     <?php
        
           function translate($keyWord) {
@@ -147,7 +148,7 @@
                         </div>
 
                         <div class="ratings-group">
-                            <h2>Abaschlusse</h2>
+                            <h2><?php translate("rating");?></h2>
                             <div class="input-group">
                                 <label for="kkabschluss"><?php translate("kk-degree") ?></label> <input type="number"
                                     name="kkabschluss" min="0" max="10" step="1" inputmode="numeric" pattern="[0-9]*"

@@ -26,5 +26,6 @@
         "kmu":"KMU",
         "tax-declaration":"Steuererklärung",
         "comment":"Kommentar",
-        "save":"Speichern"
+        "save":"Speichern",
+        "checkbox-alert":"Es muss mindestens ein Kontrollkästchen aktiviert sein"
 }

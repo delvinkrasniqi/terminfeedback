@@ -26,5 +26,6 @@
     "kmu":"Conclusion PME",
     "tax-declaration":"Conclusion d'une déclaration fiscale",
     "comment":"Commentaire",
-    "save":"enregistrer"
+    "save":"enregistrer",
+    "checkbox-alert":"Au moins une case à cocher doit être activée"
 }

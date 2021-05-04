@@ -160,6 +160,7 @@ function disableCheckbox(targetCheckbox) {
                 if (checkbox.children[0] !== targetCheckbox) {
                     checkbox.classList.add("checkbox--disabled");
                     checkbox.children[0].disabled = true;
+                    alert.classList.remove("alert--show");
                 }
             })
             checkboxesState = true;

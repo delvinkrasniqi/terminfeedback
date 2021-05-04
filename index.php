@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./assets/jquery.js"></script>
     <link rel="stylesheet" href="./assets/picker/css/default.css">
     <link rel="stylesheet" href="./assets/picker/css/default.time.css">
@@ -100,9 +101,12 @@
                     </div>
                 </div>
                 <div class="feedback-form">
-                    <form action="" method="post">
+                    <form action="" method="post" name="mainform">
+
                         <div class="checkboxes-group">
                             <h2><?php  translate("status-title");?></h2>
+                            <span class="alert" id="alert"><span class="material-icons">error</span>
+                                <?php translate("checkbox-alert")?></span>
                             <div class="input-group">
                                 <input type="checkbox" name="checkboxes" value="Nicht besucht" class="checkboxInput"
                                     id="nichtbesucht"><label
@@ -213,7 +217,9 @@
     <script src="./assets/picker/js/legacy.js"></script>
     <script src="./assets/picker/js/picker.time.js"></script>
     <script src="./assets/picker/js/picker.date.js"></script>
+    <script src="./assets/validate.js"></script>
     <script src="./assets/main.js"></script>
+
 </body>
 
 </html>

@@ -26,5 +26,6 @@
     "kmu":"PMI",
     "tax-declaration":"dichiarazione dei reinditi",
     "comment":"commento",
-    "save":"salva"
+    "save":"salva",
+    "checkbox-alert":"Almeno una casella di controllo deve essere attivata"
 }

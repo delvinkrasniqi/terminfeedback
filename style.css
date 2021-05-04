@@ -295,6 +295,63 @@ h2 {
   border-bottom: 1px solid #2989cf;
 }
 
+.feedback .feedback-form .checkboxes-group {
+  position: relative;
+}
+
+.feedback .feedback-form .checkboxes-group .alert {
+  background: #E0A800;
+  padding: 15px;
+  border-radius: 10px 10px 10px 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
+          box-shadow: 4px 4px 24px #e0dede, -4px -4px 24px #e0dede;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.feedback .feedback-form .checkboxes-group .alert::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #E0A800;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.feedback .feedback-form .checkboxes-group .alert span.material-icons {
+  color: white;
+  margin-right: 10px;
+}
+
+.feedback .feedback-form .checkboxes-group .alert--show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
 .feedback .feedback-form .checkboxes-group .input-group {
   margin-bottom: 30px;
   padding: 0 30px;

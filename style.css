@@ -329,7 +329,7 @@ h2 {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 15px;
+  left: 30px;
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
   width: 0;
@@ -612,7 +612,7 @@ h2 {
     display: block;
   }
   .feedback .feedback-form form .checkboxes-group {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .feedback .feedback-form form #submitbutton {
     padding: 15px;
@@ -668,6 +668,9 @@ h2 {
   .feedback .feedback-header .feedback-header__title {
     font-size: 1.2em;
     max-width: 80%;
+  }
+  .feedback .feedback-form .checkboxes-group .alert::before {
+    left: 20px;
   }
   .feedback .feedback-form .checkboxes-group .input-group {
     padding: 0 20px;

@@ -22,7 +22,7 @@ mainForm.addEventListener("submit", (e) => {
     //scroll to the alert
     alert.scrollIntoView({
       behavior: "smooth",
-      block: "nearest",
+      block: "start",
     });
     //stop form from submitting
     e.preventDefault();

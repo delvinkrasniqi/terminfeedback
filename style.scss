@@ -269,7 +269,7 @@ h2 {
           content: '';
           position: absolute;
           bottom: 0;
-          left: 15px;
+          left: 30px;
           transform: translate(-50%,100%);
           width: 0; 
           height: 0; 
@@ -517,7 +517,7 @@ h2 {
       form {
         display: block;
         .checkboxes-group {
-          margin-bottom: 20px;
+          margin-bottom: 30px;
         }
         #submitbutton {
           padding: 15px;
@@ -591,6 +591,11 @@ h2 {
     }
     .feedback-form {
       .checkboxes-group {
+        .alert{
+         &::before{
+          left: 20px;
+         }
+        }
         .input-group {
           padding: 0 20px;
         }
